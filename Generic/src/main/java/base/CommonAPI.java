@@ -301,14 +301,14 @@ public class CommonAPI {
 
     }
 
-    public void waitUntilSelectable(String locator, int seconds){
-        WebDriverWait webDriverWait =new WebDriverWait(driver,seconds);
+    public void waitUntilSelectable(String locator, int seconds) {
+        WebDriverWait webDriverWait = new WebDriverWait(driver, seconds);
         webDriverWait.until(ExpectedConditions.elementToBeSelected(getElement(locator)));
 
     }
 
-    public void waitUntilClickable(String locator,int seconds){
-        WebDriverWait webDriverWait =new WebDriverWait(driver,seconds);
+    public void waitUntilClickable(String locator, int seconds) {
+        WebDriverWait webDriverWait = new WebDriverWait(driver, seconds);
         webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
 
     }
@@ -319,20 +319,20 @@ public class CommonAPI {
     }
 
     public List<String> getAllLinks() {
-        List<WebElement>webElementsList= driver.findElements(By.tagName("a"));
-       List<String> stringList = new ArrayList<String>();
-       for(int i=0;i<webElementsList.size();i++) {
-           stringList.add(webElementsList.get(i).getText());
-       }
-       return stringList;
+        List<WebElement> webElementsList = driver.findElements(By.tagName("a"));
+        List<String> stringList = new ArrayList<String>();
+        for (int i = 0; i < webElementsList.size(); i++) {
+            stringList.add(webElementsList.get(i).getText());
+        }
+        return stringList;
 
     }
 
-    public void uploadFile(String path,String locator) {
+    public void uploadFile(String path, String locator) {
         driver.findElement(By.xpath(locator)).sendKeys(path);
     }
 
-    public void clearFieldByXpath(String locator){
+    public void clearFieldByXpath(String locator) {
         driver.findElement(By.xpath(locator)).clear();
     }
 
@@ -340,18 +340,18 @@ public class CommonAPI {
         driver.findElement(By.xpath(locator)).sendKeys(Keys.ENTER);
     }
 
-    public Date getTime(long millis){
-        Calendar calender =Calendar.getInstance();
+    public Date getTime(long millis) {
+        Calendar calender = Calendar.getInstance();
         calender.setTimeInMillis(millis);
         return calender.getTime();
 
     }
 
-    public void navigateBack(){
+    public void navigateBack() {
         driver.navigate().back();
     }
 
-    public void navigateForword(){
+    public void navigateForword() {
         driver.navigate().forward();
     }
 

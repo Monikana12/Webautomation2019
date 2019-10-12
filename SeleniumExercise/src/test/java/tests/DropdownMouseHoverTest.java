@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 public class DropdownMouseHoverTest extends CommonAPI {
 
     @Test(enabled = false)
-    public void testDropDown(){
+    public void testDropDown() {
         WebElement element = getElement("//*[@id='gh-cat']");
-        Select select =new Select(element);
+        Select select = new Select(element);
 
         select.selectByIndex(2);
         sleepFor(5);
@@ -20,28 +20,29 @@ public class DropdownMouseHoverTest extends CommonAPI {
     }
 
     @Test(enabled = false)
-    public void testMouseHover(){
+    public void testMouseHover() {
         WebElement element = getElementByLinkText("Fashion");
-        Actions actions =new Actions(driver);
+        Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
         clickOnElementByLinkText("Jewelry");
         sleepFor(5);
     }
+
     @Test(enabled = false)
-    public void scrollToView(){
-        WebElement element =getElementByLinkText("eBay for Charity");
-        JavascriptExecutor javascriptExecutor=(JavascriptExecutor)driver;
-        javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);",element);
+    public void scrollToView() {
+        WebElement element = getElementByLinkText("eBay for Charity");
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
         sleepFor(5);
     }
 
     @Test
-    public void testScrolling(){
-        JavascriptExecutor javascriptExecutor=(JavascriptExecutor)driver;
+    public void testScrolling() {
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("window.scrollBy(0,500)");
         javascriptExecutor.executeScript("window.scrollBy(0,1000)");
         sleepFor(5);
     }
 
-    }
+}
 

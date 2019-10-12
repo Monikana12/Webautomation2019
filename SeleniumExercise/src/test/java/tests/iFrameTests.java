@@ -11,12 +11,12 @@ public class iFrameTests extends CommonAPI {
     public void iFrameTests() {
         driver.switchTo().frame(1);
         driver.get(driver.getCurrentUrl());
-       // driver.switchTo().frame("iframe2");
+        // driver.switchTo().frame("iframe2");
         sleepFor(5);
         //-FrameID, //FrameName  //FrameIndex
         WebElement element = getElementByLinkText("Sortable");
         System.out.println(element.getText());
-        Assert.assertEquals(element.getText(),"Sortable","sortable assertion failed");
+        Assert.assertEquals(element.getText(), "Sortable", "sortable assertion failed");
 
     }
 

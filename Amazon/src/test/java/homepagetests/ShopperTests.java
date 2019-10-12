@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 public class ShopperTests extends CommonAPI {
 
     @Test
-    public void testShopperToolkit(){
-       HomepagePOM homepagePOM = PageFactory.initElements(driver,HomepagePOM.class);
+    public void testShopperToolkit() {
+        HomepagePOM homepagePOM = PageFactory.initElements(driver, HomepagePOM.class);
         homepagePOM.vaildateShopperDisplayed();
         homepagePOM.vaildShopperClickAble();
 

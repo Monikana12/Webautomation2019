@@ -36,7 +36,7 @@ public class SearchTests extends Search {
         System.out.println(elementList.size());
         //print all the value of the dropdown (not Xpath)
 
-        for(int i=0; i<elementList.size();i++) {
+        for (int i = 0; i < elementList.size(); i++) {
             System.out.println(elementList.get(i).getText());
         }
 
